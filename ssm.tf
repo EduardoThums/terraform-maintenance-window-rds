@@ -18,7 +18,7 @@ resource "aws_ssm_maintenance_window_target" "start_rds_cluster" {
 
   targets {
     key    = "resource-groups:Name"
-    values = ["MaintenanceWindowRDSClusters2"]
+    values = ["MaintenanceWindowRDSClusters"]
   }
 }
 
@@ -77,7 +77,7 @@ resource "aws_ssm_maintenance_window_target" "stop_rds_cluster" {
 
   targets {
     key    = "resource-groups:Name"
-    values = ["MaintenanceWindowRDSClusters2"]
+    values = ["MaintenanceWindowRDSClusters"]
   }
 }
 
