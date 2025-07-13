@@ -26,7 +26,7 @@ resource "aws_ssm_maintenance_window_task" "start_rds_cluster" {
   max_concurrency  = "100%"
   max_errors       = "100%"
   priority         = 1
-  task_arn         = "AWS-StartStartAuroraCluster"
+  task_arn         = "AWS-StartStopAuroraCluster"
   task_type        = "AUTOMATION"
   window_id        = aws_ssm_maintenance_window.start_rds_cluster.id
   service_role_arn = aws_iam_role.maintenance_window_service.arn

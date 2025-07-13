@@ -11,7 +11,7 @@ resource "aws_iam_policy" "start_stop_aurora_cluster_task" {
           "rds:StartDBCluster"
         ],
         "Effect" : "Allow",
-        "Resource" : "arn:aws:rds:*:*:cluster/*",
+        "Resource" : "arn:aws:rds:us-east-1:${data.aws_caller_identity.current.account_id}:cluster:*",
         "Condition" : {
           "StringEquals" : { "aws:ResourceTag/maintenance-window" : "enabled" }
         }
